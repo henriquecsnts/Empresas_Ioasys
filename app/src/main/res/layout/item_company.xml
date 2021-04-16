@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/beige"
+    android:padding="8dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageCompany"
+            android:layout_width="112dp"
+            android:layout_height="80dp"
+            android:background="@color/soft_green"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:textColor="@color/dark_indigo"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imageCompany"
+            app:layout_constraintTop_toTopOf="@id/imageCompany"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCompanyRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="4dp"
+            android:textColor="@color/warm_grey"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@id/textCompanyName"
+            app:layout_constraintTop_toBottomOf="@id/textCompanyName"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCompanyCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="1dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/warm_grey"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@id/textCompanyRole"
+            app:layout_constraintTop_toBottomOf="@id/textCompanyRole"
+            app:layout_constraintBottom_toBottomOf="@id/imageCompany"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
