@@ -20,8 +20,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class LoginFragment : Fragment() {
 
     lateinit var button: AppCompatButton
-    lateinit var viewLoading: View
-    lateinit var progressBar: ProgressBar
     private lateinit var edtEmail: EditText
     private lateinit var edtPassword: TextInputEditText
     private val loginViewModel by viewModel<LoginViewModel>()
@@ -40,16 +38,14 @@ class LoginFragment : Fragment() {
         button = view.findViewById(R.id.btnLogin)
         edtEmail = view.findViewById(R.id.edtEmail)
         edtPassword = view.findViewById(R.id.edtPassword)
-        viewLoading = view.findViewById(R.id.viewLoading)
-        progressBar = view.findViewById(R.id.progressBar)
         loadingGroup = view.findViewById(R.id.loadingGroup)
 
         button.setOnClickListener{
             loginViewModel.login(edtEmail.text.toString(), edtPassword.text.toString())
-            viewLoading.visibility = View.VISIBLE
-            progressBar.visibility = ProgressBar.VISIBLE
+
         }
         setObservers()
+        onLoading(false)
     }
 
     private fun setObservers() {
